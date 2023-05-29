@@ -65,15 +65,17 @@ const resolvers = {
     },
     // Delete a book from a user's `savedBooks`
     removeBook: async (parent, { bookId }, context) => {
-      if (context.user) {
+      try {
         const updatedUser = await User.findByIdAndUpdate(
           { _id: context.user._id },
           { $pull: { savedBooks: { bookId }}},
           { new: true }
         );
         return updatedUser;
+      } catch (error) {
+        console.error(error);
+        throw new Error('Failed to remove the book');
       }
-      throw new AuthenticationError('Please log in!');
     },
   },
 };
