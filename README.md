@@ -25,7 +25,7 @@ When the site first launches, users will have the ability to search for books, b
 
 ## Deployed Application
 
-You can find the deployed application here:
+You can find the deployed application here: https://young-basin-78188.herokuapp.com/ 
 
 ## Screenshots
 <img width="1197" alt="booksearch" src="https://github.com/ScarletBowen/graphQL-api-refactor/assets/109751916/95b08a6a-c8e3-4526-a233-23be51478cf3">
